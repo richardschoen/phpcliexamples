@@ -11,7 +11,11 @@ These are PHP scripts that should work on all platforms.
 ## List - IBM i 
 These are PHP scripts that should work with IBM i.
 
+## Tips
 
+### Debugging your PHP CLI script from command line
+Run your script with the ```-d ```debug flag and ```error_log=``` to debug from the command line and see the results echoed.   
+```php -d error_log= phpparms1.php  --name="value1" --name2="value2"```
 
 
  
