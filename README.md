@@ -3,12 +3,12 @@ This repository houses sample PHP command line example scripts and templates. I 
 
 There may be a mix of Windows, Linux and IBM i specific scripts.   
 
-## List - All Platforms
+## PHP Sample Script List - All Platforms
 These are PHP scripts that should work on all platforms.  
 - ```phpparms1.php``` - Parse command line parameters and validate them. This example contains techniques to write a clean PHP CLI script that uses try/catch to catch and handle errors and return the appropriate messages via standardard output. This may not fit everyone's style bugt I like it, especially when I want to capture stdout for error logging.
 - ```hgenralfunctions.pnp``` - General functions include module PHP script.
 
-## List - IBM i 
+## PHP Sample Script List - IBM i 
 These are PHP scripts that should work with IBM i.
 
 ## Tips
