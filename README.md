@@ -4,7 +4,7 @@ This repository houses sample PHP command line example scripts and templates. I 
 There may be a mix of Windows, Linux and IBM i specific scripts.   
 
 ## List
-- ```phpparms1.php``` - Parse command line parameters and validate them.
+- ```phpparms1.php``` - Parse command line parameters and validate them. (All Platforms)
 
 
 
