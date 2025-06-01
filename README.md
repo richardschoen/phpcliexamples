@@ -1,7 +1,7 @@
 # PHP Command Line (CLI) Example Scripts/Templates
 This repository houses sample PHP command line example scripts and templates. I have not found a lot of good sample CLI templates for use with PHP.    
 
-There may be a mix of Windows, Linux and IBM i specific scripts.   
+There may be a mix of Multi Platform, Windows, Linux and IBM i specific scripts added here over time. 
 
 ## PHP Sample Script List - All Platforms
 These are PHP scripts that should work on all platforms.  
