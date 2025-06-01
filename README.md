@@ -3,8 +3,17 @@ This repository houses sample PHP command line example scripts and templates. I 
 
 There may be a mix of Windows, Linux and IBM i specific scripts.   
 
-## List
-- ```phpparms1.php``` - Parse command line parameters and validate them. (All Platforms)
+## List - All Platforms
+These are PHP scripts that should work on all platforms.  
+- ```phpparms1.php``` - Parse command line parameters and validate them.
+
+## List - IBM i 
+These are PHP scripts that should work with IBM i.
+
+
+
+
+ 
 
 
 
