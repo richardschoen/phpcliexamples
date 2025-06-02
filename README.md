@@ -31,6 +31,17 @@ QSHONI/QSHEXEC CMDLINE('cd /home/richard/phpapps;php -d error_log= phpodbcqueryi
     DSPSTDOUT(*YES)                                                         
 ```
 
+Sample call using the QSHPHPRUN PHP wrapper command. With ```PHPCMD``` option set to *DEBUG, the PHP cli command is: ```php -d error_log=```. Also the ```DEBUGCMD``` option will display the QSHEXEC command line for debugging. We also set ```ARGDLM``` to *NONE so that we can custom format each argument and its double quotes placement. And of course ```DSPSTDOUT``` is set to *YES so we can display and debug STDOUT interactively when testing.  
+```
+QSHPHPRUN SCRIPTDIR('/home/richard/phpapps') CHGSCRDIR(*YES)                                     
+PHPCMD(*DEBUG) SCRIPTFILE(phpodbcqueryibmi1.php)                   
+ARGS('--sqlquery="select * from qiws.qcustcdt where lstname=#Henning#"' 
+'--outputfile="/tmp/output.csv"' '--replace=true' '--delimiter=","')                          
+ARGDLM(*NONE)                                       
+DSPSTDOUT(*YES)                                     
+DEBUGCMD(*YES)                                      
+```
+
 ## Tips
 
 ### Debugging your PHP CLI script from command line   
