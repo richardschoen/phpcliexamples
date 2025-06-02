@@ -21,7 +21,7 @@ php -d error_log= phpodbcquery1.php --sqlquery="select * from qiws.qcustcdt"
   --outputfile="/tmp/output.csv"  --replace=true --delimiter=","
 ```
 
-Sample call to QSHEXEC command to run the query script and display the STDOUT results. If submitting to batch, use PRTSTDOUT(*YES) instead of DSPSTDOUT(*YES) so the STDOUT results log creates a spool file instead of displaying the log. It's good to print the STDOUT log for troubleshooting script failures.
+Sample call to QSHEXEC command to run the query script and display the STDOUT results. If submitting to batch, use PRTSTDOUT(*YES) instead of DSPSTDOUT(*YES) so the STDOUT results log creates a spool file instead of displaying the log. It's good to print the STDOUT log for troubleshooting script failures.   
 ❗ Notice that if # is passed for single quote SQL query placeholders they will get automatically converted to single quotes in the script so we don't have to do any quote escaping or single quote matching in the CL command line.
 ```
 QSHONI/QSHEXEC CMDLINE('cd /home/richard/phpapps;php -d error_log= phpodbcqueryibmi1.php        
