@@ -10,9 +10,26 @@ These are PHP scripts that should work on all platforms.
 
 ## PHP Sample Script List - IBM i 
 These are PHP scripts that should work natively on IBM i from QShell or PASE. Any scripts using ODBC will require the native IBM i Access ODBC drivers to be loaded via the OPen Source Package Management or yum commands.      
+
 To integrate IBM i php command line (CLI) scripts to a traditional IBM i job stream or job scheduler, check out the QSHEXEC or QSHBASH commands available as part of the QShell on i utilities. https://www.github.com/richardschoen/qshoni 
 
-```ibmi/phpodbcqueryibmi.php``` - Run SQL query using the IBM i native ODBC driver and export results to a delimited file. The example uses the *LOCAL data source so it will automatically run as the current logged in IBM i user so no user/password is needed.   
+```ibmi/phpodbcqueryibmi.php``` - Run SQL query using the IBM i native ODBC driver and export results to a delimited file. The example uses the *LOCAL data source so it will automatically run as the current logged in IBM i user so no user/password is needed.  
+
+Sample call to php command to run the query script:    
+```
+php -d error_log= phpodbcquery1.php --sqlquery="select * from qiws.qcustcdt"
+  --outputfile="/tmp/output.csv"  --replace=true --delimiter=","
+```
+
+Sample call to QSHEXEC command to run the query script and display the STDOUT results.   
+❗ Notice that if # is passed for single quote SQL query placeholders they will get automatically converted to single quotes in the script so we don't have to do any quote escaping or single quote matching in the CL command line.
+```
+QSHONI/QSHEXEC CMDLINE('cd /home/richard/phpapps;php -d error_log= phpodbcqueryibmi1.php        
+    --sqlquery="select * from qiws.qcustcdt where lstnam=#Henning#" 
+    --outputfile="/tmp/output.csv"  --replace=true      
+    --delimiter=","')                               
+    DSPSTDOUT(*YES)                                                         
+```
 
 ## Tips
 
